@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Ezzat Company Home Page</title>
@@ -7,8 +8,21 @@
 <body>
     <h2>Ezzat Company Home Page</h2>
     <hr>
-    Welcome to the Ezzat company home page!
-
+    <p>
+        Welcome to the Ezzat company home page!
+    </p>
+    <hr>
+    <!-- display username and role -->
+    <p>
+        User: <span sec:authentication="principal.username"></span>
+        <br><br>
+        Role(s) <span sec:authentication="principal.authorities"></span>
+    </p>
+    <hr>
+    <!-- Add a logout button -->
+    <form action="#" th:action="@{/logout}" method="post">
+        <input type="submit" value="Logout">
+    </form>
 
 </body>
 </html>
