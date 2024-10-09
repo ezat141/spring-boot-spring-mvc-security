@@ -23,6 +23,6 @@ public class DemoController {
     @GetMapping("/systems")
     public String showSystems() {
 
-        return "systeams";
+        return "systems";
     }
 }
