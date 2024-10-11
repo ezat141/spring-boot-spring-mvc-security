@@ -15,7 +15,10 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` char(80) NOT NULL,
-  `enabled` tinyint NOT NULL,  
+  `enabled` tinyint NOT NULL,
+  `first_name` varchar(64) NOT NULL,
+  `last_name` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
@@ -29,11 +32,11 @@ CREATE TABLE `user` (
 -- Default passwords here are: fun123
 --
 
-INSERT INTO `user` (`username`,`password`,`enabled`)
+INSERT INTO `user` (`username`,`password`,`enabled`, `first_name`, `last_name`, `email`)
 VALUES 
-('ahmed','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
-('mohamed','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
-('ezzat','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1);
+('ahmed','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1, 'Ahmed', 'Mohamed', 'ahmed@ebi.com'),
+('mohamed','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1, 'Mohamed', 'Mohamed', 'mohamed@ebi.com'),
+('ezzat','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1, 'Ezzat', 'Mohamed', 'ezzat@ebi.com');
 
 
 --

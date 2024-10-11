@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class DemoController {
 
     @GetMapping("/")
-    public String showHome(){
+    public String showHome() {
+
         return "home";
     }
 
@@ -18,6 +19,7 @@ public class DemoController {
 
         return "leaders";
     }
+
     // add request mapping for /systems
 
     @GetMapping("/systems")
@@ -25,4 +27,14 @@ public class DemoController {
 
         return "systems";
     }
+
 }
+
+
+
+
+
+
+
+
+
